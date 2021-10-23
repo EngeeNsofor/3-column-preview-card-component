@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 
+html {
+    box-sizing: border-box;
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+*::before, *::after {
+    box-sizing: inherit;
 }
 
 body {
@@ -14,12 +22,13 @@ body {
     justify-content: center;
     align-items: center;
     background-color: hsl(0, 0%, 95%);
+    padding: 7%;
 }
 
 main {
     max-width: 900px;
     display: flex;
-    max-height: 500px;
+    height: 500px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -95,4 +104,54 @@ button {
     color: white;
     background-color: hsl(179, 100%, 13%);
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        height: 100%;
+        display: block;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    main {
+        flex-direction: column;
+        height: 100%;
+    } 
+    
+    .bright-orange {
+        border-radius: 6px 6px 0 0;
+    }
+
+    .dark-cyan {
+        border-radius: 0 0 6px 6px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        height: 100%;
+        display: block;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    main {
+        flex-direction: column;
+        height: 100%;
+    } 
+    
+    .bright-orange {
+        border-radius: 6px 6px 0 0;
+    }
+
+    .dark-cyan {
+        border-radius: 0 0 6px 6px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:904px) {
+    article {
+        padding: 1.7rem;
+    }   
 }
